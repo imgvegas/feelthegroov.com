@@ -1,0 +1,97 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.background-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+header, footer {
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+}
+
+header h1 {
+    margin-bottom: 10px;
+    font-size: 2.5em;
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+footer {
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.text-section {
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 600px;
+}
+
+.text-section h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.text-section p {
+    font-size: 1.2em;
+}
+
+/* Media Queries for Background Images */
+@media (max-width: 600px) {
+    .background-container {
+        background-image: url('small.jpg');
+    }
+}
+
+@media (min-width: 601px) and (max-width: 768px) {
+    .background-container {
+        background-image: url('medium.jpg');
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .background-container {
+        background-image: url('large.jpg');
+    }
+}
+
+@media (min-width: 1201px) {
+    .background-container {
+        background-image: url('default.jpg');
+    }
+}
